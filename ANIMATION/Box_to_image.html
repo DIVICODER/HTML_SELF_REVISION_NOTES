@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Animation</title>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: fade 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html> -->
+
+
+------ THE ABOVE IS A COMMENT SECTION --- YOU CAN UNCOMMENT IT AND CHECK OF HOW ANIMATIONS PROPERTIES ACCUALLY WORK---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Animation</title>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+  }
+
+  .image {
+    display: none; /* Initially hide the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="box" onclick="toggleImage()"></div>
+  <img class="image" src="red_color.jpg" alt="Image">
+  
+  <script>
+    function toggleImage() {
+      var image = document.querySelector('.image');
+      image.style.display = (image.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
